@@ -45,17 +45,17 @@ export const MentorPanel: React.FC<MentorPanelProps> = ({ currentView, logConten
 
   return (
     <div 
-      className={`fixed left-0 w-full md:left-8 md:w-80 md:rounded-lg bg-black/90 backdrop-blur-md border-t md:border border-cyan-500/30 text-cyan-100 shadow-lg z-40 transition-all duration-300 animate-fade-in-up ${
+      className={`fixed left-0 w-full md:left-8 md:w-80 md:rounded-lg bg-[#002046]/95 backdrop-blur-md border-t md:border border-[#00B2A9]/50 text-[#E6EBF4] shadow-lg z-40 transition-all duration-300 animate-fade-in-up ${
         isMinimized 
-          ? 'bottom-0 h-12 overflow-hidden cursor-pointer hover:bg-black' 
+          ? 'bottom-0 h-12 overflow-hidden cursor-pointer hover:bg-[#002d56]' 
           : 'bottom-0 md:bottom-8 p-4'
       }`}
       onClick={() => isMinimized && setIsMinimized(false)}
     >
-      <div className={`flex items-center justify-between ${isMinimized ? 'h-full px-4' : 'mb-2 border-b border-cyan-500/30 pb-2'}`}>
+      <div className={`flex items-center justify-between ${isMinimized ? 'h-full px-4' : 'mb-2 border-b border-[#00B2A9]/30 pb-2'}`}>
         <div className="flex items-center gap-2">
-          <div className={`w-3 h-3 rounded-full ${loading ? 'bg-yellow-400 animate-pulse' : 'bg-cyan-400'}`}></div>
-          <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">AI Operations Mentor</span>
+          <div className={`w-3 h-3 rounded-full ${loading ? 'bg-[#FDB913] animate-pulse' : 'bg-[#00B2A9]'}`}></div>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#00B2A9]">AI Operations Mentor</span>
         </div>
 
         <button 
@@ -63,7 +63,7 @@ export const MentorPanel: React.FC<MentorPanelProps> = ({ currentView, logConten
             e.stopPropagation();
             setIsMinimized(!isMinimized);
           }}
-          className="text-cyan-500 hover:text-white transition-colors p-1"
+          className="text-[#00B2A9] hover:text-white transition-colors p-1"
           aria-label={isMinimized ? "Expand" : "Minimize"}
         >
           {isMinimized ? (
@@ -81,7 +81,7 @@ export const MentorPanel: React.FC<MentorPanelProps> = ({ currentView, logConten
       {!isMinimized && (
         <div className="text-sm leading-relaxed min-h-[40px] max-h-[150px] overflow-y-auto">
           {loading ? (
-            <span className="flex items-center gap-2 text-cyan-500">
+            <span className="flex items-center gap-2 text-[#00B2A9]">
               Analyzing operational context...
             </span>
           ) : (

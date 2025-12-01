@@ -14,6 +14,16 @@ export interface LogEntry {
   timestamp: string;
 }
 
+export interface SurveyResponse {
+  strategicThinking: number; // 1-5
+  epistemicVigilance: number; // 1-5
+  intellectualAutonomy: number; // 1-5
+  perceivedUsefulness: number; // 1-5
+  perceivedEaseOfUse: number; // 1-5
+  reflectionConstraint: string; // Text
+  studentExperience: string; // Text
+}
+
 export interface AppState {
   studentId: string;
   view: ViewState;
@@ -24,6 +34,7 @@ export interface AppState {
     tablet: boolean;
     folder: boolean;
   };
+  surveyData: SurveyResponse | null;
 }
 
 export const INITIAL_LOGBOOK_STATE = {

@@ -180,19 +180,22 @@ export const generateFinalReportFeedback = async (
   `;
 
   const prompt = `
-    You are evaluating a student's Hospitality Management Assignment based on the following Rubric Matrix:
+    You are an expert Hospitality Management Mentor evaluating a student's draft assignment.
 
+    Rubric Matrix for Learning Outcomes (LOs):
     ${RUBRIC_MATRIX}
 
-    Student's Work Logs:
+    Student's Current Draft (Work Logs):
     ${combinedLog}
 
     Task:
-    Provide written feedback (NO GRADES) for each of the following 5 criteria based on the Rubric descriptions.
+    For each of the 5 criteria, provide specific, CONSTRUCTIVE ADVICE on how the student can IMPROVE their current answer to better meet the Learning Outcomes (aiming for the 'Outstanding' or 'Exceptional' level).
     
+    Do not just evaluate what they wrote. Focus on what is missing or how they can deepen their theoretical application.
+
     Constraints:
     1. Maximum 3 sentences per criterion.
-    2. Be constructive and professional.
+    2. Focus on "Feed-forward" (how to improve) rather than just feedback.
     3. Return the response as a JSON object with keys: "LO1_2", "LO3", "LO4", "LO5", "Transferable".
     4. "Transferable" refers to the quality of their writing/argumentation in the logs provided.
   `;

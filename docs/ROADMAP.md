@@ -3,20 +3,25 @@
 This roadmap outlines the future development phases for **Front Desk: Operations Command**.
 
 ## ✅ Phase 1: MVP (Completed)
-- [x] **Core UI:** Virtual Reception Desk Dashboard with 4 key hotspots.
-- [x] **Scenario Views:** PMS (Efficiency), Phone (Service), Folder (Sustainability), Tablet (Tech).
-- [x] **Smart Logbook:** Auto-saving, text input per scenario.
-- [x] **AI Mentor:** Context-aware Socratic questioning via Gemini.
-- [x] **Feedback Loops:** Instant "Save & Evaluate" and "Theory Refresher" buttons.
-- [x] **Reporting:** Final rubric-based assessment generation and Word export.
+- [x] **Core UI:** Cartoon-style Virtual Reception Desk Dashboard.
+- [x] **Scenario Views:** 
+    - PMS (Visualized Data).
+    - Phone (Interactive Decision Support).
+    - Folder (Sustainability Audit).
+    - Tablet (Interactive Tech Specs).
+- [x] **Smart Logbook:** 
+    - "Operations Coach" (Instant Feedback).
+    - "Theory Refresher" (Quick Definitions).
+    - Auto-saving logic.
+- [x] **AI Integration:** Context-aware Mentor Panel & Rubric-based Reporting.
 - [x] **Session Management:** Student ID login and local persistence.
-- [x] **Responsiveness:** Full mobile support.
+- [x] **Responsiveness:** Optimized Mobile List View vs Desktop Desk View.
 
 ## 🚧 Phase 2: Enhanced Interactivity (Planned Q2)
-- [ ] **Interactive Phone:** Audio-based interaction for the phone scenario (Text-to-Speech & Speech-to-Text).
-- [ ] **Drag-and-Drop Tasks:** Interactive rostering puzzle in the PMS view to fix the bottleneck manually.
-- [ ] **Multi-turn Mentor Chat:** Allow students to reply to the AI Mentor's questions directly in the panel.
-- [ ] **Rich Text Logbook:** Allow bolding/bullet points in student notes.
+- [ ] **Interactive Roster Puzzle:** Allow students to drag-and-drop staff shifts in the PMS view to solve the bottleneck.
+- [ ] **Audio Immersion:** Add sound effects (phone ringing, lobby ambience) and Text-to-Speech for the Guest on the phone.
+- [ ] **Expanded Tech Hub:** Add a "Compare Competitors" feature in the Tablet view.
+- [ ] **Rich Text Editing:** Allow basic formatting in the Logbook.
 
 ## 🔮 Phase 3: Instructor Ecosystem (Planned Q3)
 - [ ] **Instructor Dashboard:** View real-time progress of all students.
@@ -24,7 +29,7 @@ This roadmap outlines the future development phases for **Front Desk: Operations
 - [ ] **Class Analytics:** Aggregate data on which Learning Outcomes (LOs) the class is struggling with.
 - [ ] **LMS Integration:** LTI 1.3 support to embed directly into Canvas/Blackboard.
 
-## 🎮 Phase 4: Gamification & Polish (Future)
+## 🎮 Phase 4: Gamification (Future)
 - [ ] **Timer Challenges:** "Handle this complaint in under 2 minutes."
 - [ ] **Badges:** "Sustainability Champion," "Efficiency Expert."
 - [ ] **3D Environment:** Upgrade dashboard to a WebGL-based 3D desk.

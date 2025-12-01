@@ -2,7 +2,7 @@ import React from 'react';
 
 export const FolderView: React.FC = () => {
   return (
-    <div className="p-8 h-full bg-[#f3e5ab] text-gray-900 overflow-y-auto font-serif">
+    <div className="p-8 h-full bg-[#E6EBF4] text-[#333F48] overflow-y-auto font-serif">
       <div className="max-w-3xl mx-auto bg-white shadow-xl p-12 min-h-full border border-gray-300 relative">
         {/* Paper texture effect */}
         <div className="absolute top-0 right-0 p-4">
@@ -11,7 +11,7 @@ export const FolderView: React.FC = () => {
            </div>
         </div>
 
-        <h1 className="text-3xl font-bold mb-2 border-b-4 border-green-700 pb-2">Sustainability Audit Report</h1>
+        <h1 className="text-3xl font-bold mb-2 border-b-4 border-[#00B2A9] pb-2 text-[#002046]">Sustainability Audit Report</h1>
         <div className="flex justify-between text-sm text-gray-500 mb-8">
           <span>Date: Oct 2023</span>
           <span>Dept: Facilities & Environment</span>
@@ -19,7 +19,7 @@ export const FolderView: React.FC = () => {
 
         <div className="space-y-8">
           <section>
-            <h3 className="text-xl font-bold text-green-800 mb-3">1. Energy Consumption Analysis</h3>
+            <h3 className="text-xl font-bold text-[#00B2A9] mb-3">1. Energy Consumption Analysis</h3>
             <p className="leading-relaxed">
               Energy audits indicate a <strong className="text-red-600">15% increase</strong> in kWh usage compared to Q3 2022. 
               Primary drivers identified:
@@ -32,7 +32,7 @@ export const FolderView: React.FC = () => {
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-green-800 mb-3">2. Waste Stream (Circular Economy Gap)</h3>
+            <h3 className="text-xl font-bold text-[#00B2A9] mb-3">2. Waste Stream (Circular Economy Gap)</h3>
             <div className="bg-gray-50 p-4 border-l-4 border-gray-400 italic">
               "Current single-use plastic amenity bottles account for 300kg of landfill waste monthly."
             </div>
@@ -44,7 +44,7 @@ export const FolderView: React.FC = () => {
           </section>
 
           <section>
-            <h3 className="text-xl font-bold text-green-800 mb-3">3. Servicescape Audit</h3>
+            <h3 className="text-xl font-bold text-[#00B2A9] mb-3">3. Servicescape Audit</h3>
             <p className="leading-relaxed">
               Current harsh fluorescent lighting in the lobby correlates with increased guest agitation during wait times. 
               <strong>Recommendation:</strong> Implement warm-spectrum LED retrofit to influence customer mood (Lesson 4).
@@ -53,11 +53,11 @@ export const FolderView: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-300 flex items-center gap-4">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-800 font-bold border-2 border-green-800">
+            <div className="w-16 h-16 bg-[#E6EBF4] rounded-full flex items-center justify-center text-[#002046] font-bold border-2 border-[#002046]">
                 C-
             </div>
             <div>
-                <p className="font-bold">Current Environmental Score</p>
+                <p className="font-bold text-[#002046]">Current Environmental Score</p>
                 <p className="text-sm text-gray-600">Action required immediately to meet 2024 targets.</p>
             </div>
         </div>

@@ -2,9 +2,9 @@ import React from 'react';
 
 export const PhoneView: React.FC = () => {
   return (
-    <div className="p-8 h-full bg-gray-900 text-white flex flex-col items-center justify-center relative overflow-hidden">
+    <div className="p-8 h-full bg-[#002046] text-white flex flex-col items-center justify-center relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black opacity-50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#003060] via-[#002046] to-black opacity-50"></div>
       
       <div className="w-full max-w-lg z-10">
         <div className="bg-black border border-gray-700 rounded-3xl p-8 shadow-2xl relative">
@@ -25,10 +25,10 @@ export const PhoneView: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <button className="bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2">
+            <button className="bg-[#00B2A9] hover:bg-[#009b93] text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-lg">
                Apologize & Compensate
             </button>
-            <button className="bg-gray-600 hover:bg-gray-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2">
+            <button className="bg-[#333F48] hover:bg-[#2D3748] text-white py-3 px-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-lg">
                Explain Staff Shortage
             </button>
           </div>
