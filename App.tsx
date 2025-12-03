@@ -198,7 +198,29 @@ export default function App() {
 
   const handleDownloadClassData = () => {
     const keys = Object.keys(localStorage);
-    const rows = [['Student ID', 'Q1: Strategy', 'Q2: Vigilance', 'Q3: Autonomy', 'Q4: Usefulness', 'Q5: EaseOfUse', 'Q6: Reflection', 'Q7: Experience']];
+    
+    // Header Row
+    const headers = [
+      'Student ID', 
+      'Q1: Strategic Thinking', 
+      'Q2: Epistemic Vigilance', 
+      'Q3: Intellectual Autonomy', 
+      'Q4: Perceived Usefulness', 
+      'Q5: Ease of Use', 
+      'Q6: Reflection Constraint', 
+      'Q7: Student Experience'
+    ];
+
+    // Helper to safely escape CSV fields (wrapping in quotes if they contain commas/newlines/quotes)
+    const escapeCsv = (field: any) => {
+      const stringValue = String(field || '');
+      if (/[",\n]/.test(stringValue)) {
+        return `"${stringValue.replace(/"/g, '""')}"`;
+      }
+      return stringValue;
+    };
+
+    const rows = [headers.map(escapeCsv).join(',')];
     
     keys.forEach(key => {
       if (key.startsWith(STORAGE_BASE_KEY)) {
@@ -206,31 +228,35 @@ export default function App() {
           const item = JSON.parse(localStorage.getItem(key) || '{}');
           if (item.surveyData) {
             const s = item.surveyData;
-            rows.push([
+            // Map strictly to the headers above
+            const rowData = [
               item.studentId, 
               s.strategicThinking, 
               s.epistemicVigilance, 
               s.intellectualAutonomy, 
               s.perceivedUsefulness, 
               s.perceivedEaseOfUse, 
-              `"${s.reflectionConstraint.replace(/"/g, '""')}"`, // Escape quotes for CSV
-              `"${s.studentExperience.replace(/"/g, '""')}"`
-            ]);
+              s.reflectionConstraint,
+              s.studentExperience
+            ];
+            rows.push(rowData.map(escapeCsv).join(','));
           }
         } catch (e) { console.error("Skip corrupted", key); }
       }
     });
 
-    const csvContent = "data:text/csv;charset=utf-8," 
-        + rows.map(e => e.join(",")).join("\n");
-        
-    const encodedUri = encodeURI(csvContent);
+    // Use Blob to handle larger data payloads and correct character encoding
+    const csvContent = rows.join("\n");
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    
     const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "Class_Survey_Data.csv");
+    link.href = url;
+    link.download = "Class_Survey_Data.csv";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   // Render current view content
